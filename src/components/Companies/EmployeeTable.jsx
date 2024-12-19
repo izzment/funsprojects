@@ -88,7 +88,7 @@ const EmployeeTable = () => {
                     <Search className='absolute left-3 top-2.5 text-gray-400' size={18}/>
                 </div>
             {/*  RESET BUTTON  */}
-                <button className='' onClick={handleReset}>Reset</button>
+                <button className='bg-dusky-purple text-native px-8 py-2 rounded ' onClick={handleReset}>Reset</button>
             </div>
 
             <div className='overflow-x-auto'>

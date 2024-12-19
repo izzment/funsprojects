@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'native': "#1A1C46"
+        'native': "#1A1C46",
+        'dusky-purple': "#CACBFF"
       }
     },
   },

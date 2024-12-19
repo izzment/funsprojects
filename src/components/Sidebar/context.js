@@ -21,7 +21,7 @@ export const SidebarContext = [
     {icon: home, darkicon: darkhome, title: "Home", href: '/home',},
     {icon: calendar, darkicon: darkcalendar, title: "Calendar", href: '/calendar',},
     {icon: files, darkicon: darkfiles, title: "Files", href: '/files',},
-    {icon: company, darkicon: darkcompany, title: "Companies", href: '/company',},
+    {icon: company, darkicon: darkcompany, title: "Companies", href: '/companies',},
     {icon: tasks, darkicon: darktasks, title: "Tasks", href: '/tasks',},
     {icon: faq, darkicon: darkfaq, title: "FAQs", href: '/frequently-asked-questions'},
 ]
