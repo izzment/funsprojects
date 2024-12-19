@@ -1,0 +1,38 @@
+.main-sidebar{
+    background-color: #1A1C46;
+    width: fit-content;
+    color: white;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    align-items: center;
+    position: fixed;
+    height: 90vh;
+}
+
+.main-sidebar-item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.8vh;
+    padding: 0.5vw;
+    width: 100%;
+}
+.main-sidebar-item:hover{
+    background-color: #CACBFF;
+    color: #1A1C46;
+}
+
+.main-sidebar-img{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+.main-sidebar-title{
+    margin: 0;
+}
+.main-sidebar a {
+    text-decoration: none;
+    color: white;
+}
