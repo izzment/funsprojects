@@ -3,26 +3,26 @@ import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 
 const employeeData = [
-    { photo: "", empID: 200369, fname: "Carla", lname: "Dixon", email: "cdixon@example.com", department: "Accounting", status: "Active" },
-    { photo: "", empID: 200336, fname: "John", lname: "Blanc", email: "jblanc@example.com", department: "Marketing", status: "Active" },
-    { photo: "", empID: 200588, fname: "Sophia", lname: "Stevenson", email: "sstevenson@example.com", department: "Administration", status: "Active" },
-    { photo: "", empID: 200114, fname: "Emma", lname: "Morrison", email: "emorrison@example.com", department: "Marketing", status: "Active" },
-    { photo: "", empID: 200145, fname: "Tom", lname: "DaFoe", email: "tdafoe@example.com", department: "Sales", status: "Active" },
-    { photo: "", empID: 200889, fname: "Hillary", lname: "Williams", email: "hwilliams@example.com", department: "Sales", status: "Active" },
-    { photo: "", empID: 200698, fname: "Stewart", lname: "Watson", email: "swatson@example.com", department: "Accounting", status: "Active" },
-    { photo: "", empID: 200135, fname: "Jane", lname: "Davies", email: "jdavies@example.com", department: "Accounting", status: "Active" },
-    { photo: "", empID: 200367, fname: "Mark", lname: "Hill", email: "mhill@example.com", department: "Marketing", status: "Active" },
-    { photo: "", empID: 200115, fname: "Marion", lname: "Anderson", email: "manderson@example.com", department: "Sales", status: "Active" },
-    { photo: "", empID: 200839, fname: "Constance", lname: "Thompson", email: "cthompson@example.com", department: "Sales", status: "Active" },
-    { photo: "", empID: 200019, fname: "Leila", lname: "Miller", email: "lmiller@example.com", department: "Marketing", status: "Active" },
-    { photo: "", empID: 200362, fname: "Arthur", lname: "Collins", email: "acollins@example.com", department: "Marketing", status: "Active" },
-    { photo: "", empID: 200182, fname: "William", lname: "Farrel", email: "wfarrel@example.com", department: "Administration", status: "Active" },
-    { photo: "", empID: 200999, fname: "Christine", lname: "Malone", email: "cmalone@example.com", department: "Administration", status: "Active" },
-    { photo: "", empID: 200001, fname: "Tommy", lname: "Hanon", email: "thanon@example.com", department: "Sales", status: "Active" },
-    { photo: "", empID: 200277, fname: "Esther", lname: "Jones", email: "ejones@example.com", department: "Accounting", status: "Active" },
-    { photo: "", empID: 200114, fname: "Angelique", lname: "Smith", email: "asmith@example.com", department: "Accounting", status: "Active" },
-    { photo: "", empID: 200908, fname: "Ruby", lname: "Jolie", email: "rjolie@example.com", department: "Marketing", status: "Active" },
-    { photo: "", empID: 200767, fname: "Bo", lname: "Johnson", email: "bjohnson@example.com", department: "Sales", status: "Active" },
+    { photo: "", empID: 200369, fname: "Carla", lname: "Dixon", email: "cdixon@example.com", department: "Accounting", status: "Full Time" },
+    { photo: "", empID: 200336, fname: "John", lname: "Blanc", email: "jblanc@example.com", department: "Marketing", status: "Weekend" },
+    { photo: "", empID: 200588, fname: "Sophia", lname: "Stevenson", email: "sstevenson@example.com", department: "Administration", status: "Part Time" },
+    { photo: "", empID: 200114, fname: "Emma", lname: "Morrison", email: "emorrison@example.com", department: "Marketing", status: "Part Time" },
+    { photo: "", empID: 200145, fname: "Tom", lname: "DaFoe", email: "tdafoe@example.com", department: "Sales", status: "Part Time" },
+    { photo: "", empID: 200889, fname: "Hillary", lname: "Williams", email: "hwilliams@example.com", department: "Sales", status: "Weekend" },
+    { photo: "", empID: 200698, fname: "Stewart", lname: "Watson", email: "swatson@example.com", department: "Accounting", status: "Full Time" },
+    { photo: "", empID: 200135, fname: "Jane", lname: "Davies", email: "jdavies@example.com", department: "Accounting", status: "Full Time" },
+    { photo: "", empID: 200367, fname: "Mark", lname: "Hill", email: "mhill@example.com", department: "Marketing", status: "Part Time" },
+    { photo: "", empID: 200115, fname: "Marion", lname: "Anderson", email: "manderson@example.com", department: "Sales", status: "Part Time" },
+    { photo: "", empID: 200839, fname: "Constance", lname: "Thompson", email: "cthompson@example.com", department: "Sales", status: "Weekend" },
+    { photo: "", empID: 200019, fname: "Leila", lname: "Miller", email: "lmiller@example.com", department: "Marketing", status: "Full Time" },
+    { photo: "", empID: 200362, fname: "Arthur", lname: "Collins", email: "acollins@example.com", department: "Marketing", status: "Full Time" },
+    { photo: "", empID: 200182, fname: "William", lname: "Farrel", email: "wfarrel@example.com", department: "Administration", status: "Full Time" },
+    { photo: "", empID: 200999, fname: "Christine", lname: "Malone", email: "cmalone@example.com", department: "Administration", status: "Full Time" },
+    { photo: "", empID: 200001, fname: "Tommy", lname: "Hanon", email: "thanon@example.com", department: "Sales", status: "Full Time" },
+    { photo: "", empID: 200277, fname: "Esther", lname: "Jones", email: "ejones@example.com", department: "Accounting", status: "Weekend" },
+    { photo: "", empID: 200114, fname: "Angelique", lname: "Smith", email: "asmith@example.com", department: "Accounting", status: "Part Time" },
+    { photo: "", empID: 200908, fname: "Ruby", lname: "Jolie", email: "rjolie@example.com", department: "Marketing", status: "Full Time" },
+    { photo: "", empID: 200767, fname: "Bo", lname: "Johnson", email: "bjohnson@example.com", department: "Sales", status: "Full Time" },
 
 ];
 
@@ -71,7 +71,7 @@ const EmployeeTable = () => {
                     <input
                         type='text'
                         placeholder='Filter by name'
-                        className='placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                        className='placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 border-2 focus:ring-dusky-purple'
                         value={searchTerm}
                         onChange={handleNameSearch}
                     />
@@ -81,14 +81,14 @@ const EmployeeTable = () => {
                     <input
                         type='text'
                         placeholder='Filter by ID'
-                        className='placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                        className='placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-dusky-purple border-2'
                         value={searchID}
                         onChange={handleIDSearch}
                     />
                     <Search className='absolute left-3 top-2.5 text-gray-400' size={18}/>
                 </div>
             {/*  RESET BUTTON  */}
-                <button className='bg-dusky-purple text-native px-8 py-2 rounded ' onClick={handleReset}>Reset</button>
+                <button className='bg-dusky-purple text-native px-8 py-2 rounded shadow-lg hover:bg-native hover:text-dusky-purple' onClick={handleReset}>Reset</button>
             </div>
 
             <div className='overflow-x-auto'>
@@ -155,11 +155,8 @@ const EmployeeTable = () => {
 
                             <td className='px-6 py-4 whitespace-nowrap'>
 									<span
-                                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                                            user.status === "Active"
-                                                ? "bg-green-800 text-green-100"
-                                                : "bg-red-800 text-red-100"
-                                        }`}
+                                        className={`px-2 py-0.5 inline-flex text-xs leading-5 font-thin rounded ${
+                                            user.status === "Full Time" && "bg-dusky-purple"} ${user.status === "Part Time" && "bg-special-blue text-white"} ${user.status === "Weekend" && "bg-mustard text-white"}`}
                                     >
 										{user.status}
 									</span>

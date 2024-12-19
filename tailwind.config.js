@@ -8,7 +8,9 @@ export default {
     extend: {
       colors: {
         'native': "#1A1C46",
-        'dusky-purple': "#CACBFF"
+        'dusky-purple': "#CACBFF",
+        'special-blue': "#5AABFF",
+        'mustard': '#EA9C14'
       }
     },
   },
