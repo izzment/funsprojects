@@ -7,7 +7,7 @@ const SecondarySidebar = ({name}) => {
     function isSelected(e) {
         setSelected(true)
     }
-
+    // comment comment
     return (
         <div className='w-1/6 bg-dusky-purple ml-[-70px] flex flex-col gap-2 py-8 px-4'>
 
