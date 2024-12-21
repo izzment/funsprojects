@@ -1,6 +1,6 @@
 import React from 'react';
 import './Nav.css';
-import userImg from '../../img/usericon - admin.jpeg';
+import userImg from '../../../img/usericon - admin.jpeg';
 import {Link} from "react-router-dom";
 
 

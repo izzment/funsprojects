@@ -1,13 +1,13 @@
 import './App.css';
-import {SidebarContext} from "./components/Sidebar/context";
-import Nav from "./components/Nav/Nav";
-import {Sidebar} from "./components/Sidebar/Sidebar";
+import {SidebarContext} from "./components/common/Sidebar/context";
+import Nav from "./components/common/Nav/Nav";
+import {Sidebar} from "./components/common/Sidebar/Sidebar";
 
 import {Route, Routes} from 'react-router-dom'
 import {ServicesPage} from "./pages/ServicesPage";
 import {NewsPage} from "./pages/NewsPage";
 import {FAQPage} from "./pages/FAQPage";
-import {EmployeePage} from "./pages/Companies/EmployeePage";
+import {CompanyPage} from "./pages/CompanyPage";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
               <Routes>
                   <Route path='/' element={<ServicesPage />} />
                   <Route path='/news' element={<NewsPage />} />
-                  <Route path='/companies' element={<EmployeePage />} />
+                  <Route path='/companies/*' element={<CompanyPage />} />
                   <Route path='/frequently-asked-questions' element={<FAQPage />} />
               </Routes>
           </main>

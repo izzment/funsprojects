@@ -1,4 +1,4 @@
-import FAQs from "../components/FAQs";
+import FAQs from "../components/FAQ/FAQs";
 
 export const FAQPage = () => {
     return (

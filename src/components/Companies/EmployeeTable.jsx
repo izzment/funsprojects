@@ -61,42 +61,51 @@ const EmployeeTable = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
         >
-            <div className='flex justify-between items-center mb-6'>
+            <div className='flex flex-col justify-between mb-6'>
                 <div>
                     <h2 className='text-xl font-semibold'>Employee</h2>
                     <p>Lorem ipsum dolor sit amet</p>
                 </div>
+                <div className='bg-white flex justify-between p-4'>
+                    <div className='flex items-start gap-2'>
+                        <div className='relative'>
+                            <input
+                                type='text'
+                                placeholder='Filter by name'
+                                className='placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 border-2 focus:ring-dusky-purple'
+                                value={searchTerm}
+                                onChange={handleNameSearch}
+                            />
+                            <Search className='absolute left-3 top-2.5 text-gray-400' size={18}/>
+                        </div>
+                        <div className='relative'>
+                            <input
+                                type='text'
+                                placeholder='Filter by ID'
+                                className='placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-dusky-purple border-2'
+                                value={searchID}
+                                onChange={handleIDSearch}
+                            />
+                            <Search className='absolute left-3 top-2.5 text-gray-400' size={18}/>
+                        </div>
+                    </div>
 
-                <div className='relative'>
-                    <input
-                        type='text'
-                        placeholder='Filter by name'
-                        className='placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 border-2 focus:ring-dusky-purple'
-                        value={searchTerm}
-                        onChange={handleNameSearch}
-                    />
-                    <Search className='absolute left-3 top-2.5 text-gray-400' size={18}/>
+                    {/*  RESET BUTTON  */}
+                    <button
+                        className='bg-dusky-purple text-native px-8 py-2 rounded shadow-lg hover:bg-native hover:text-dusky-purple'
+                        onClick={handleReset}>Reset
+                    </button>
                 </div>
-                <div className='relative'>
-                    <input
-                        type='text'
-                        placeholder='Filter by ID'
-                        className='placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-dusky-purple border-2'
-                        value={searchID}
-                        onChange={handleIDSearch}
-                    />
-                    <Search className='absolute left-3 top-2.5 text-gray-400' size={18}/>
-                </div>
-            {/*  RESET BUTTON  */}
-                <button className='bg-dusky-purple text-native px-8 py-2 rounded shadow-lg hover:bg-native hover:text-dusky-purple' onClick={handleReset}>Reset</button>
             </div>
-
             <div className='overflow-x-auto'>
                 <table className='min-w-full divide-y divide-gray-700'>
                     <thead>
-                    <tr>
+                    <tr className='bg-[#FAFAFA]'>
                         <th className='px-6 py-3 text-left text-xs font-medium uppercase tracking-wider'>
                             Photo
+                        </th>
+                        <th className='px-6 py-3 text-left text-xs font-medium uppercase tracking-wider'>
+                            Employee ID
                         </th>
                         <th className='px-6 py-3 text-left text-xs font-medium uppercase tracking-wider'>
                             First Name
@@ -113,13 +122,10 @@ const EmployeeTable = () => {
                         <th className='px-6 py-3 text-left text-xs font-medium uppercase tracking-wider'>
                             Status
                         </th>
-                        <th className='px-6 py-3 text-left text-xs font-medium uppercase tracking-wider'>
-                            Actions
-                        </th>
                     </tr>
                     </thead>
 
-                    <tbody className='divide-y divide-gray-700'>
+                    <tbody className='divide-y divide-gray-700 bg-white'>
                     {filteredUsers.map((user) => (
                         <motion.tr
                             key={user.id}
@@ -138,6 +144,9 @@ const EmployeeTable = () => {
                                 </div>
                             </td>
                             <td className='px-6 py-4 whitespace-nowrap'>
+                                <div className='text-sm'>{user.empID}</div>
+                            </td>
+                            <td className='px-6 py-4 whitespace-nowrap'>
                                 <div className='text-sm'>{user.fname}</div>
                             </td>
                             <td className='px-6 py-4 whitespace-nowrap'>
@@ -147,10 +156,10 @@ const EmployeeTable = () => {
                                 <div className='text-sm'>{user.email}</div>
                             </td>
                             <td className='px-6 py-4 whitespace-nowrap'>
-									<div
-                                        className='text-sm'>
-										{user.department}
-									</div>
+                                <div
+                                    className='text-sm'>
+                                    {user.department}
+                                </div>
                             </td>
 
                             <td className='px-6 py-4 whitespace-nowrap'>
@@ -160,11 +169,6 @@ const EmployeeTable = () => {
                                     >
 										{user.status}
 									</span>
-                            </td>
-
-                            <td className='px-6 py-4 whitespace-nowrap text-sm'>
-                                <button className='text-indigo-400 hover:text-indigo-300 mr-2'>Edit</button>
-                                <button className='text-red-400 hover:text-red-300'>Delete</button>
                             </td>
                         </motion.tr>
                     ))}

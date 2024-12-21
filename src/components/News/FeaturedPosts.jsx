@@ -1,4 +1,4 @@
-import Image from '../Image'
+import Image from '../common/Image'
 import { Link } from "react-router-dom"
 
 const FeaturedPosts = () => {

@@ -2,18 +2,18 @@ import React from 'react';
 import './SubServices.css';
 
 // Import images
-import img6 from '../img/Imagesfun/6.png';
-import img7 from '../img/Imagesfun/7.png';
-import img8 from '../img/Imagesfun/8.png';
-import img9 from '../img/Imagesfun/9.png';
-import img10 from '../img/Imagesfun/10.png';
-import img11 from '../img/Imagesfun/11.png';
-import img12 from '../img/Imagesfun/12.png';
-import img13 from '../img/Imagesfun/13.png';
-import img14 from '../img/Imagesfun/14.png';
-import img15 from '../img/Imagesfun/15.png';
-import img16 from '../img/Imagesfun/16.png';
-import img18 from '../img/Imagesfun/18.png';
+import img6 from '../../img/Imagesfun/6.png';
+import img7 from '../../img/Imagesfun/7.png';
+import img8 from '../../img/Imagesfun/8.png';
+import img9 from '../../img/Imagesfun/9.png';
+import img10 from '../../img/Imagesfun/10.png';
+import img11 from '../../img/Imagesfun/11.png';
+import img12 from '../../img/Imagesfun/12.png';
+import img13 from '../../img/Imagesfun/13.png';
+import img14 from '../../img/Imagesfun/14.png';
+import img15 from '../../img/Imagesfun/15.png';
+import img16 from '../../img/Imagesfun/16.png';
+import img18 from '../../img/Imagesfun/18.png';
 import {Link} from "react-router-dom";
 
 // Array of small services

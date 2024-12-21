@@ -1,5 +1,5 @@
-import MainServices from "../components/MainServices";
-import SubServices from "../components/SubServices";
+import MainServices from "../components/Home/MainServices";
+import SubServices from "../components/Home/SubServices";
 
 export const ServicesPage = () => {
     return (
