@@ -3,12 +3,11 @@ import { NavLink } from "react-router-dom";
 const SecondarySidebar = ({ name }) => {
   return (
     <div className="w-1/6 bg-dusky-purple ml-[-70px] flex flex-col gap-2 py-8 px-4">
-        {/* More accurate mapping{Active} */}
       {name.map((item) => (
         <NavLink
           key={item.href}
           to={item.href}
-          end 
+          end // This will ensure direct root path
           className={({ isActive }) =>
             isActive
               ? "px-8 py-2 text-dusky-purple rounded-lg bg-native font-semibold"
@@ -23,4 +22,3 @@ const SecondarySidebar = ({ name }) => {
 };
 
 export default SecondarySidebar;
-//change
