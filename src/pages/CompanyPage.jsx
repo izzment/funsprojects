@@ -20,11 +20,12 @@ export const CompanyPage = () => {
       <SecondarySidebar name={companySidebar} />
       <div className="w-5/6">
         <Routes>
-          <Route path="/companies" element={<EmployeeTable />} />
-          <Route path="/companies/department" element={<Department />} />
-          <Route path="/companies/designation" element={<Designation />} />
-          <Route path="/companies/exitdetails" element={<ExitDetails />} />
-          <Route path="/companies/org-tree" element={<OrganizationTree />} />
+          {/* use proper version syntax!!! */}
+          <Route index element={<EmployeeTable />} />
+          <Route path="department" element={<Department />} />
+          <Route path="designation" element={<Designation />} />
+          <Route path="exitdetails" element={<ExitDetails />} />
+          <Route path="org-tree" element={<OrganizationTree />} />
         </Routes>
       </div>
     </div>
