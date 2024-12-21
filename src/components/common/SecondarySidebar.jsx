@@ -7,7 +7,7 @@ const SecondarySidebar = ({ name }) => {
         <NavLink
           key={item.href}
           to={item.href}
-          end // This will ensure direct root path
+          end // This should hopefully enure proper root match
           className={({ isActive }) =>
             isActive
               ? "px-8 py-2 text-dusky-purple rounded-lg bg-native font-semibold"
